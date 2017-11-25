@@ -1,0 +1,40 @@
+{
+  "name": "@harounb/node-cli-starter",
+  "version": "0.0.1",
+  "description": "A simple boilerplate for a cli application",
+  "bin": {
+    "cli-starter-app": "bin/cli.js"
+  },
+  "author": "Haroun Butt",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "test": "jest",
+    "format": "prettier --write \"{lib,bin}/**/*.js\"",
+    "lint": "eslint \"{lib,bin}/**/*.js\""
+  },
+  "devDependencies": {
+    "@harounb/eslint-config-node": "^2.0.0",
+    "eslint": "^4.11.0",
+    "jest": "^21.2.1",
+    "prettier": "1.8.2"
+  },
+  "eslintConfig": {
+    "extends": "@harounb/eslint-config-node",
+    "overrides": [
+      {
+        "files": [
+          "{lib,bin}/**/__tests__/**/*.js"
+        ],
+        "env": {
+          "jest": true
+        }
+      }
+    ]
+  },
+  "dependencies": {
+    "chalk": "^2.3.0",
+    "meow": "^3.7.0",
+    "ora": "^1.3.0"
+  }
+}
